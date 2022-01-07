@@ -6,5 +6,6 @@ RUN unzip canvas.zip
 RUN rm -rf canvas.zip &&\ 
     cp -rf canvas/*  . &&\
     rm -rf canvas
+    touch jio
 EXPOSE 80
 CMD ["/usr/sbin/httpd" , "-D" ,"FOREGROUND" ]
